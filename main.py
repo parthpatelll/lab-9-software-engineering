@@ -4,7 +4,16 @@ def encode(password):
         encoded_password += str((int(char) + 3) % 10)
     return encoded_password
 
+def decode(password):
 
+    # partners implementation
+    decode_password = ''
+    for char in password:
+        char = int(char)
+        char -= 3
+        char = str(char)
+        decode_password += char
+    return decode_password
 
 def main():
     encoded_password = ''
